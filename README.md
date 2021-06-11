@@ -50,3 +50,4 @@ dirb http://10.10.10.29
 gobuster dir -u https://10.11.1.237/web1/web/ -k -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
 gobuster dir -u http://10.11.1.8 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt 
 wpscan --url http://10.10.10.29/wordpress
+find / -xdev -type f -print0 | xargs -0 grep -H "password"
